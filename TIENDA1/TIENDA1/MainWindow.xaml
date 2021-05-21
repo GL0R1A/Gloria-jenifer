@@ -1,0 +1,51 @@
+﻿<Window x:Class="TIENDA1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TIENDA1"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid OpacityMask="{DynamicResource {x:Static SystemColors.HighlightBrushKey}}">
+        <Grid.Background>
+            <RadialGradientBrush>
+                <GradientStop Color="Black" Offset="0"/>
+                <GradientStop Color="White" Offset="0.748"/>
+                <GradientStop Color="{DynamicResource {x:Static SystemColors.ActiveCaptionColorKey}}" Offset="0.937"/>
+                <GradientStop Color="#FF00FF97" Offset="0.055"/>
+            </RadialGradientBrush>
+        </Grid.Background>
+        <Label Content="FECHA" HorizontalAlignment="Left" Margin="22,217,0,0" VerticalAlignment="Top" Width="71" Height="26" FontFamily="Franklin Gothic Medium"/>
+        <Label Content="PRODUCTO" HorizontalAlignment="Left" Margin="10,131,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.794,4.302" FontFamily="Franklin Gothic Medium"/>
+        <Label Content="PRECIO" HorizontalAlignment="Left" Margin="10,180,0,0" VerticalAlignment="Top" Width="67" Height="28" FontFamily="Franklin Gothic Medium"/>
+        <Label Content="CANTIDAD" HorizontalAlignment="Left" Margin="19,262,0,0" VerticalAlignment="Top" Width="74" Height="27" FontFamily="Franklin Gothic Medium"/>
+        <Button x:Name="compra" Content="Realizar Compra" HorizontalAlignment="Left" Margin="105,302,0,0" VerticalAlignment="Top" Width="112" Height="33" Click="agregar_Click"/>
+        <Button x:Name="BtnBuscarFecha" Content="Buscar Fechas" HorizontalAlignment="Left" Margin="505,335,0,0" VerticalAlignment="Top" Width="88" Height="23" Click="BtnBuscarFecha_Click" FontWeight="Bold" FontFamily="Microsoft YaHei UI"/>
+        <TextBox x:Name="texprecio" HorizontalAlignment="Left" Height="23" Margin="83,180,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="167" RenderTransformOrigin="0.5,0.5" FontFamily="Segoe UI Semibold">
+            <TextBox.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-0.759"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </TextBox.RenderTransform>
+        </TextBox>
+        <TextBox x:Name="texproducto" HorizontalAlignment="Left" Height="31" Margin="93,131,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="154" FontFamily="Segoe UI Semibold"/>
+        <TextBox x:Name="texcodigo" HorizontalAlignment="Left" Height="23" Margin="90,82,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="157" FontFamily="Comic Sans MS" FontWeight="Bold"/>
+        <Label Content="CODIGO" HorizontalAlignment="Left" Margin="10,82,0,0" VerticalAlignment="Top" Width="67" RenderTransformOrigin="0.284,-1.731" FontFamily="Franklin Gothic Medium"/>
+        <TextBox x:Name="texcantidad" HorizontalAlignment="Left" Height="23" Margin="93,262,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="147" FontFamily="Segoe UI Semibold"/>
+        <DataGrid x:Name="Datosgrid" HorizontalAlignment="Left" Height="265" Margin="355,10,0,0" VerticalAlignment="Top" Width="379"/>
+        <DatePicker x:Name="fecha2" HorizontalAlignment="Left" Margin="383,296,0,0" VerticalAlignment="Top"/>
+        <DatePicker x:Name="fecha3" HorizontalAlignment="Left" Margin="566,296,0,0" VerticalAlignment="Top"/>
+        <DatePicker x:Name="fecha1" HorizontalAlignment="Left" Margin="90,216,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="Txtcodigo" HorizontalAlignment="Left" Height="23" Margin="474,363,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="71"/>
+        <TextBox x:Name="txtActualizar" HorizontalAlignment="Left" Height="23" Margin="575,363,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="99"/>
+        <Button x:Name="BtnEliminar1" Content="Eliminar" HorizontalAlignment="Left" Height="28" Margin="641,333,0,0" VerticalAlignment="Top" Width="79" Click="BtnEliminar1_Click" FontFamily="Segoe UI Black" FontWeight="Bold"/>
+        <Button x:Name="BtnActualizar" Content="Actualizar" HorizontalAlignment="Left" Height="28" Margin="369,333,0,0" VerticalAlignment="Top" Width="79" Click="BtnActualizar_Click" FontFamily="Lucida Sans Unicode" FontWeight="Bold"/>
+        <Button Content="Cargar" HorizontalAlignment="Left" Height="23" Margin="251,386,0,0" VerticalAlignment="Top" Width="129" Click="Button_Click" FontWeight="Bold" FontFamily="Palatino Linotype"/>
+        <Button x:Name="btnDescargar" Content="Respaldar en Csv" HorizontalAlignment="Left" Margin="22,389,0,0" VerticalAlignment="Top" Width="164" Click="btnDescargar_Click"/>
+        <TextBox x:Name="ruta" HorizontalAlignment="Left" Height="23" Margin="22,361,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="164" FontFamily="Segoe UI Semibold"/>
+
+    </Grid>
+</Window>
